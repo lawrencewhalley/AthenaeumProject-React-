@@ -1,0 +1,14 @@
+.MovieBox {
+    position: center;
+    text-align: center;
+    color: rgb(238, 238, 238);
+    width: 30%;
+    height: 500px;
+    margin-left: 35%;
+    margin-right: 35%;
+    margin-top: 100px;
+    padding-top: 50px;
+    border-radius: 25px;
+    background: #000000;
+    padding: 20px;
+}

@@ -6,20 +6,19 @@ import DbTest from './DbTest.jsx'
 
 export default class Login extends Component {
     render() {
-
         return <>
-            <form class="form">
+            <form className="form">
                 <p id="heading">Login</p>
-                <div class="field">
-                    <input autocomplete="off" placeholder="Username" class="input-field" type="text" />
+                <div className="field">
+                    <input autoComplete="off" placeholder="Username" className="input-field" type="text" />
                 </div>
-                <div class="field">
-                    <input placeholder="Password" class="input-field" type="password" />
+                <div className="field">
+                    <input placeholder="Password" className="input-field" type="password" />
                 </div>
-                <div class="btn">
-                    <button class="button1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Login&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+                <div className="btn">
+                    <button className="button1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Login&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
                 </div>
-                <button class="button3">Forgot Password</button>
+                <button className="button3">Forgot Password</button>
             </form>
             <DbTest />
         </>

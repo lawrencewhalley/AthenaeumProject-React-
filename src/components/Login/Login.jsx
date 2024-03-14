@@ -17,7 +17,7 @@ export default class Login extends Component {
             //call api and get result using var1 and var 2 as parameters
 
             // check to see if the api returned true or false
-            take to next page or display error
+            //take to next page or display error
 
             window.location.href = "C:\git2\ReactVideoServer\Pages\Home.html";
         }

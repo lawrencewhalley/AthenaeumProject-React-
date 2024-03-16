@@ -10,11 +10,16 @@
   },
   "dependencies": {
     "cors": "^2.8.5",
+    "filestack-js": "^3.31.0",
+    "filestack-react": "^5.0.0",
+    "fs": "^0.0.1-security",
     "msnodesqlv8": "^4.1.2",
     "mssql": "^10.0.2",
+    "multer": "^1.4.5-lts.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.22.3"
+    "react-router-dom": "^6.22.3",
+    "save": "^2.9.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.64",

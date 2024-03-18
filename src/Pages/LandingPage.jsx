@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import MovieUpload from './MovieUpload.jsx';
+import MovieUpload from '../components/MovieUpload/MovieUpload.jsx';
 import MovieList from '../components/MovieFiles/MovieList.jsx';
 import './LandingPage.css'
 

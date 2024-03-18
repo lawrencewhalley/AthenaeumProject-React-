@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './MovieList.css';
+import { Link } from 'react-router-dom';
+
 
 const MovieList = () => {
     const [jsonData, setJsonData] = useState(null);
@@ -75,6 +77,8 @@ const MovieList = () => {
 
     return (
         <>
+            <h1 className='MoviesTitle'>Movies</h1>
+
             <table className="MovieListTable">
                 <tbody>
                     {records.reduce((rows, record, index) => {
@@ -88,7 +92,18 @@ const MovieList = () => {
                             {row.map((d, columnIndex) => (
                                 <td className='movie' key={columnIndex}>
                                     <span className='image'>
-                                        {blobUrls[d.movieName] && <img src={URL.createObjectURL(blobUrls[d.movieName])} alt="Movie Poster" />}
+                                        <Link
+                                            to={{
+                                                pathname: "/MoviePage/" + d.movieName + "/" + d.movieID,
+                                            }}
+                                        >
+                                            {blobUrls[d.movieName] && (
+                                                <img
+                                                    src={URL.createObjectURL(blobUrls[d.movieName])}
+                                                    alt="Movie Poster"
+                                                />
+                                            )}
+                                        </Link>;
                                     </span>
                                     <span className='movieName'>{d.movieName}</span>
                                 </td>

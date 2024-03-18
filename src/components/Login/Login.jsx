@@ -20,7 +20,6 @@ export default class Login extends Component {
         const Password = document.getElementById('Password').value;
 
         const apiUrl = 'https://localhost:7259/LoginRequest?Username=' + Username + '&Password=' + Password;
-        //const apiUrl = 'https://localhost:7259/LoginRequest?username=test&password=test'
 
         console.log(apiUrl);
 

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { useState } from "react";
+import './MovieUpload.css'
 
 export default class MovieUpload extends Component {
 
@@ -32,12 +32,7 @@ export default class MovieUpload extends Component {
             formDataMoviePoster.append('MoviePoster', MoviePosterInput.files[0]);
             formDataMoviePoster.append('MovieFile', MovieFile.files[0]);
 
-            console.log(MoviePosterInput.files[0]);
-            console.log(MovieFile.files[0]);
-            console.log(MovieDesc);
-            console.log(MovieName);
-
-            fetch('https://localhost:7259/api/Movie/UploadImage', {
+            fetch('https://localhost:7259/api/Movie/UploadMovie', {
                 method: 'POST',
                 body: formDataMoviePoster
             })
@@ -65,9 +60,6 @@ export default class MovieUpload extends Component {
 
         return (
             <>
-                <h1 className="title">The Athenaeum </h1>
-
-                <h1 className="title">Movie Upload Form :</h1>
                 <form className="form" id="MovieUploadForm" onSubmit={this.checkLogin}>
                     <p id="heading">Movie Upload</p>
                     <div className="field">
@@ -77,12 +69,12 @@ export default class MovieUpload extends Component {
                         <input autoComplete="off" placeholder="Movie Description" className="input-field" type="text" id="MovieDesc" />
                     </div>
                     <div className="SubmitButton">
-                        <label> Movie Poster: &nbsp;&nbsp;&nbsp;&nbsp;</label>
-                        <input type="file" id="MoviePoster" />
+                        <label className="sectiontitle" > Movie Poster: &nbsp;&nbsp;&nbsp;&nbsp;</label>
+                        <input type="file" id="MoviePoster" className="ChooseFileButton" />
                     </div>
                     <div className="SubmitButton">
-                        <label> Movie File: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-                        <input type="file" id="MovieFile" />
+                        <label className="sectiontitle"> Movie File: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                        <input type="file" id="MovieFile" className="ChooseFileButton" />
                     </div>
                     <div className="btn">
                         <button className="button1" type="submit">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Upload&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
@@ -91,10 +83,6 @@ export default class MovieUpload extends Component {
                         <label>Current Status: </label>
                         <label id="Result">Selecting</label>
                     </div>
-
-                    <br /><br /><br /><br /><br /><br />
-                    <a href="./LandingPage">Return To Menu</a>
-
                 </form>
             </>
         );

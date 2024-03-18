@@ -9,21 +9,35 @@ Getting the API Working
 --npm install filestack-react
 --npm install -- save multer
 
+<img src={URL.createObjectURL(GetMoviePoster(d.movieName))} />
 
-function CurrentState() {
-    const [Status, setStatus] = useState("Selecting");
+useEffect(() => {
+            fetch(apicall)
+                .then(response => response.json())
+                .then(data => {
+                    if (data != null) {
+                        setJsonData(data);
 
-    const Uploading = () => {
-        setStatus(previousState => {
-            return { ...previousState, Status: "Uploading" };
-        });
-    }
+                        data.forEach(movie => {
+                            console.log("image data have been parsed")
+                            testtest(movie.imageData)
+                        });
 
-    const ReturnMessage = (string) => {
-        setStatus(previousState => {
-            return { ...previousState, Status: string }
-        });
-    }
+                        const blobUrls = data.map(movie => (
+                            {
+                                imageUrl: testtest(movie.imageData)
+                            }));
 
-    return <h1>Current Status: {Status}</h1>
-}
+                        setJsonData(blobUrls)
+                        console.log("JSONDATA", jsonData)
+                        console.log("BLOBS", blobUrls)
+
+                        console.log("success", data);
+                    } else {
+                        console.log("fail");
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        }, []);

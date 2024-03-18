@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "cors": "^2.8.5",
+    "express": "^4.18.3",
     "filestack-js": "^3.31.0",
     "filestack-react": "^5.0.0",
     "fs": "^0.0.1-security",

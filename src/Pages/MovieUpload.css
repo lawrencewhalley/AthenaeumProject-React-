@@ -1,0 +1,39 @@
+.SubmitButton {
+    color: white;
+    text-align: center;
+    padding-top: 4%;
+}
+
+.sectiontitle {
+    font-weight: 1000;
+}
+
+.ChooseFileButton {
+    color: #8e0fc0;
+    padding-top: 4%;
+    padding-bottom: 4%;
+}
+
+.result {
+    text-align: center;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    color: #ffffff;
+}
+
+.returnButton {
+    text-align: center;
+    font-weight: 800;
+    text-decoration: none;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    width: 40%;
+}
+
+.btn {
+    margin-top: 0px;
+}
+
+.form {
+    min-width: 420px;
+}

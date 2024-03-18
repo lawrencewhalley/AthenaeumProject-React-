@@ -1,19 +1,16 @@
 .form {
     display: flex;
+    float: center;
     flex-direction: column;
     gap: 10px;
-    padding-left: 2em;
-    padding-right: 2em;
-    padding-bottom: 0.4em;
-    margin-top: 100px;
     background-color: #171717;
     border-radius: 25px;
     transition: .4s ease-in-out;
-    position: absolute;
     width: 30%;
-    left: 60%;
-    top: 250px;
-    margin: 0 0 0 -25%
+    margin-left: 35%;
+    padding-bottom: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .form:hover {
@@ -112,4 +109,17 @@
 .button3:hover {
     background-color: red;
     color: white;
+}
+
+.title {
+    padding-top: 30px;
+    position: center;
+    text-align: center;
+    color: rgb(238, 238, 238);
+    width: 30%;
+    margin-left: 35%;
+    margin-right: 35%;
+    border-radius: 25px;
+    padding: 20px;
+    padding-bottom: 200px;
 }

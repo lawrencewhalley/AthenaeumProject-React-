@@ -1,18 +1,22 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link, useParams } from 'react-router-dom';
 import './MoviePage.css';
-import { useParams } from 'react-router-dom';
-
-
+import VideoPlayer from './VideoPlayer.jsx'
 
 function MoviePage() {
 
-    const { movieId } = useParams();
-    const { movieName } = useParams();
+    const { movieID } = useParams();
 
-    console.log(movieId)
-    console.log(movieName)
+    const [videoId, setVideoId] = useState(null)
 
+    let tempvar = "videos/" + movieID
+
+    console.log(movieID)
+
+    function playVideo(e, videoId) {
+        e.preventDefault()
+        setVideoId(videoId)
+    }
 
 
     return (
@@ -24,12 +28,10 @@ function MoviePage() {
                 </div>
             </Link>
 
-            <h1>
-                REHEHEHHEHEHE + {movieId} + {movieName}
-            </h1>
-
-
-
+            <div className="App">
+                {videoId && <VideoPlayer videoId={videoId}></VideoPlayer>} <br />
+                <button onClick={(e) => { playVideo(e, { movieID }) }}>Play Video</button>
+            </div>
 
         </>
     );

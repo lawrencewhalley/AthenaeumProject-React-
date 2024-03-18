@@ -18,6 +18,7 @@ const MovieList = () => {
             .then(data => {
                 if (data != null) {
                     setJsonData(data);
+                    console.log(data);
                 } else {
                     console.log("fail");
                 }
@@ -94,7 +95,7 @@ const MovieList = () => {
                                     <span className='image'>
                                         <Link
                                             to={{
-                                                pathname: "/MoviePage/" + d.movieName + "/" + d.movieID,
+                                                pathname: "/MoviePage/" + d.movieID,
                                             }}
                                         >
                                             {blobUrls[d.movieName] && (
